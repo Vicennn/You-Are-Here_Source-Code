@@ -1,0 +1,479 @@
+import processing.video.*;
+import processing.sound.*;
+
+//------------------------1600 x 900 VERSION------------------------//
+
+boolean background1 = true;
+boolean background2 = true;
+boolean background3 = true;
+boolean background4 = true;
+boolean background5 = true;
+boolean background6 = true;
+boolean background7 = true;
+boolean background8 = true;
+boolean background9 = true;
+boolean background10 = true;
+boolean background11 = true;
+boolean background12 = true;
+boolean background13 = true;
+Movie mov0;
+Movie mov1;
+Movie mov2;
+Movie mov3;
+Movie mov4;
+Movie mov5;
+Movie mov6;
+Movie mov7;
+Movie mov8;
+Movie mov9;
+Movie mov10;
+Movie mov11;
+Movie mov12;
+Movie mov13;
+
+SoundFile ost;
+
+void setup() {
+    
+  //background music
+  ost = new SoundFile(this,"NasienieChamberAmbience.wav");
+  ost.loop();
+  ost.amp(0.2);
+  
+  
+  //video(s)
+  size(1600, 900);
+  mov0 = new Movie(this, "clip1080p0.mp4");
+  mov0.loop();
+  mov1 = new Movie(this, "clip1080p1.mp4");
+  mov1.loop();
+  mov2 = new Movie(this, "clip1080p2.mp4");
+  mov2.loop();
+  mov3 = new Movie(this, "clip1080p3.mp4");
+  mov3.loop();
+  mov4 = new Movie(this, "clip1080p4.mp4");
+  mov4.loop();
+  mov5 = new Movie(this, "clip1080p5.mp4");
+  mov5.loop();
+  mov6 = new Movie(this, "clip1080p6.mp4");
+  mov6.loop();
+  mov7 = new Movie(this, "clip1080p7.mp4");
+  mov7.loop();
+  mov8 = new Movie(this, "clip1080p8.mp4");
+  mov8.loop();
+  mov9 = new Movie(this, "clip1080p9.mp4");
+  mov9.loop();
+  mov10 = new Movie(this, "clip1080p10.mp4");
+  mov10.loop();
+  mov11 = new Movie(this, "clip1080p11.mp4");
+  mov11.loop();
+  mov12 = new Movie(this, "clip1080p12.mp4");
+  mov12.loop();
+  mov13 = new Movie(this, "clip1080p13.mp4");
+  mov13.loop();
+  surface.setResizable(true);
+}
+
+void draw() {
+  updateBackground();
+}
+
+void updateBackground() {
+  if (background1) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov1, 0, 0);
+    return;
+  }
+
+
+  if (background2) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov2, 0, 0 );
+    return;
+  }
+
+
+  if (background3) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov3, 0, 0 );
+    return;
+  }
+
+  if (background4) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov4, 0, 0 );
+    return;
+  }
+
+  if (background5) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov5, 0, 0 );
+    return;
+  }
+
+  if (background6) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov6, 0, 0 );
+    return;
+  }
+
+  if (background7) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov7, 0, 0 );
+    return;
+  }
+
+  if (background8) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov8, 0, 0 );
+    return;
+  }
+
+  if (background9) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov9, 0, 0 );
+    return;
+  }
+
+  if (background10) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov10, 0, 0 );
+    return;
+  }
+
+  if (background11) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov11, 0, 0 );
+    return;
+  }
+
+  if (background12) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov12, 0, 0 );
+    return;
+  }
+
+  if (background13) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov13, 0, 0 );
+    return;
+  }
+}
+
+boolean isMouseOver(int x, int y, int w, int h) {
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+    return  true;
+  }
+  return false;
+}
+
+void mousePressed() {
+  if (isMouseOver(260, 45, 320, 45) == true) {
+    println("1");
+    background1 = !background1;
+  }
+  if (isMouseOver(260, 120, 320, 45) == true) {
+    println("2");
+    background2 = !background2;
+  }
+  if (isMouseOver(260, 560, 320, 45) == true) {
+    println("3");
+    background3 = !background3;
+  }
+  if (isMouseOver(260, 660, 320, 45) == true) {
+    println("4");
+    background4 = !background4;
+  }
+  if (isMouseOver(690, 20, 320, 40) == true) {
+    println("5");
+    background5 = !background5;
+  }
+  if (isMouseOver(720, 120, 320, 40) == true) {
+    println("6");
+    background6 = !background6;
+  }
+  if (isMouseOver(720, 200, 320, 40) == true) {
+    println("7");
+    background7 = !background7;
+  }
+  if (isMouseOver(720, 280, 320, 40) == true) {
+    println("8");
+    background8 = !background8;
+  }
+  if (isMouseOver(760, 380, 320, 40) == true) {
+    println("9");
+    background9 = !background9;
+  }
+  if (isMouseOver(1080, 550, 320, 40) == true) {
+    println("10");
+    background10 = !background10;
+  }
+  if (isMouseOver(1080, 620, 320, 40) == true) {
+    println("11");
+    background11 = !background11;
+  }
+  if (isMouseOver(940, 660, 320, 40) == true) {
+    println("12");
+    background12 = !background12;
+  }
+  if (isMouseOver(1190, 800, 400,100) == true) {
+    println("13");
+    background13 = !background13;
+  }
+}
+
+void movieEvent (Movie m) {
+  m.read();
+}import processing.video.*;
+import processing.sound.*;
+
+//------------------------1600 x 900 VERSION------------------------//
+
+boolean background1 = true;
+boolean background2 = true;
+boolean background3 = true;
+boolean background4 = true;
+boolean background5 = true;
+boolean background6 = true;
+boolean background7 = true;
+boolean background8 = true;
+boolean background9 = true;
+boolean background10 = true;
+boolean background11 = true;
+boolean background12 = true;
+boolean background13 = true;
+Movie mov0;
+Movie mov1;
+Movie mov2;
+Movie mov3;
+Movie mov4;
+Movie mov5;
+Movie mov6;
+Movie mov7;
+Movie mov8;
+Movie mov9;
+Movie mov10;
+Movie mov11;
+Movie mov12;
+Movie mov13;
+
+SoundFile ost;
+
+void setup() {
+    
+  //background music
+  ost = new SoundFile(this,"NasienieChamberAmbience.wav");
+  ost.loop();
+  ost.amp(0.2);
+  
+  
+  //video(s)
+  size(1600, 900);
+  mov0 = new Movie(this, "clip1080p0.mp4");
+  mov0.loop();
+  mov1 = new Movie(this, "clip1080p1.mp4");
+  mov1.loop();
+  mov2 = new Movie(this, "clip1080p2.mp4");
+  mov2.loop();
+  mov3 = new Movie(this, "clip1080p3.mp4");
+  mov3.loop();
+  mov4 = new Movie(this, "clip1080p4.mp4");
+  mov4.loop();
+  mov5 = new Movie(this, "clip1080p5.mp4");
+  mov5.loop();
+  mov6 = new Movie(this, "clip1080p6.mp4");
+  mov6.loop();
+  mov7 = new Movie(this, "clip1080p7.mp4");
+  mov7.loop();
+  mov8 = new Movie(this, "clip1080p8.mp4");
+  mov8.loop();
+  mov9 = new Movie(this, "clip1080p9.mp4");
+  mov9.loop();
+  mov10 = new Movie(this, "clip1080p10.mp4");
+  mov10.loop();
+  mov11 = new Movie(this, "clip1080p11.mp4");
+  mov11.loop();
+  mov12 = new Movie(this, "clip1080p12.mp4");
+  mov12.loop();
+  mov13 = new Movie(this, "clip1080p13.mp4");
+  mov13.loop();
+  surface.setResizable(true);
+}
+
+void draw() {
+  updateBackground();
+}
+
+void updateBackground() {
+  if (background1) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov1, 0, 0);
+    return;
+  }
+
+
+  if (background2) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov2, 0, 0 );
+    return;
+  }
+
+
+  if (background3) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov3, 0, 0 );
+    return;
+  }
+
+  if (background4) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov4, 0, 0 );
+    return;
+  }
+
+  if (background5) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov5, 0, 0 );
+    return;
+  }
+
+  if (background6) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov6, 0, 0 );
+    return;
+  }
+
+  if (background7) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov7, 0, 0 );
+    return;
+  }
+
+  if (background8) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov8, 0, 0 );
+    return;
+  }
+
+  if (background9) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov9, 0, 0 );
+    return;
+  }
+
+  if (background10) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov10, 0, 0 );
+    return;
+  }
+
+  if (background11) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov11, 0, 0 );
+    return;
+  }
+
+  if (background12) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov12, 0, 0 );
+    return;
+  }
+
+  if (background13) {
+    image(mov0, 0, 0);
+  } else {
+    image(mov13, 0, 0 );
+    return;
+  }
+}
+
+boolean isMouseOver(int x, int y, int w, int h) {
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+    return  true;
+  }
+  return false;
+}
+
+void mousePressed() {
+  if (isMouseOver(260, 45, 320, 45) == true) {
+    println("1");
+    background1 = !background1;
+  }
+  if (isMouseOver(260, 120, 320, 45) == true) {
+    println("2");
+    background2 = !background2;
+  }
+  if (isMouseOver(260, 560, 320, 45) == true) {
+    println("3");
+    background3 = !background3;
+  }
+  if (isMouseOver(260, 660, 320, 45) == true) {
+    println("4");
+    background4 = !background4;
+  }
+  if (isMouseOver(690, 20, 320, 40) == true) {
+    println("5");
+    background5 = !background5;
+  }
+  if (isMouseOver(720, 120, 320, 40) == true) {
+    println("6");
+    background6 = !background6;
+  }
+  if (isMouseOver(720, 200, 320, 40) == true) {
+    println("7");
+    background7 = !background7;
+  }
+  if (isMouseOver(720, 280, 320, 40) == true) {
+    println("8");
+    background8 = !background8;
+  }
+  if (isMouseOver(760, 380, 320, 40) == true) {
+    println("9");
+    background9 = !background9;
+  }
+  if (isMouseOver(1080, 550, 320, 40) == true) {
+    println("10");
+    background10 = !background10;
+  }
+  if (isMouseOver(1080, 620, 320, 40) == true) {
+    println("11");
+    background11 = !background11;
+  }
+  if (isMouseOver(940, 660, 320, 40) == true) {
+    println("12");
+    background12 = !background12;
+  }
+  if (isMouseOver(1190, 800, 400,100) == true) {
+    println("13");
+    background13 = !background13;
+  }
+}
+
+void movieEvent (Movie m) {
+  m.read();
+}
